@@ -3,7 +3,7 @@ pragma solidity ^0.4.18;
 import './SafeMath.sol';
 import './ERC20.sol';
 
-/**
+/*
  * @title Toptal token
  */
 
@@ -13,12 +13,12 @@ contract ToptalToken is ERC20 {
   mapping(address => uint256) balances;
   mapping (address => mapping (address => uint256)) internal allowed;
 
-  string public name = "Toptal Token";
-  string public symbol = "TTT";
-  uint256 public decimals = 6;
+  string public name = "rocktoken";
+  string public symbol = "rock";
+  uint256 public decimals = 18;
 
   function ToptalToken() public {
-    totalSupply = 1000000 * (10 ** decimals);
+    totalSupply = 100000000000000000000000000000 * (10 ** decimals);
     balances[msg.sender] = totalSupply;
   }
 

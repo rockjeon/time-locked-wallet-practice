@@ -10,8 +10,10 @@ DApp = {
     // set to true to use with local blockchain
     development: true,
     //Rinkeby:
-    factoryAddress: "0xe47684d658872fbde11c82036099a12c066c4fa3",
-    tokenAddress: "0x86b32525e687500ed4a665d1b16fef526cdd6f10",
+    // factoryAddress: "0x799939b1f99AA4d2f433048D7beDa57aab5D7530",
+    factoryAddress: " 0xe721EB0011b3637bC74aC68f89c9082bb9ee7db6",
+    tokenAddress: " 0x897852aBC42AE0596A3d1e45c82b7f7c48a7f859",
+
 
     init: function() {
         console.log("[x] Initializing DApp.");
@@ -29,7 +31,7 @@ DApp = {
           DApp.web3Provider = web3.currentProvider;
         } else {
           // If no injected web3 instance is detected, fallback to the TestRPC
-          DApp.web3Provider = new Web3.providers.HttpProvider('http://localhost:9545');
+          DApp.web3Provider = new Web3.providers.HttpProvider("https://rinkeby.infura.io/");
         }
         web3 = new Web3(DApp.web3Provider);
         console.log("[x] web3 object initialized.");
